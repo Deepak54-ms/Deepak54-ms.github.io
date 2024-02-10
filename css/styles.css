@@ -1,0 +1,13 @@
+/* Add your custom styles here */
+
+body {
+    padding-top: 56px; /* Adjust based on the height of your navbar */
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 56px; /* Adjust for a different height on smaller screens */
+    }
+}
+
+/* Add more styles as needed */
