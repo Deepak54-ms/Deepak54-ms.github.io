@@ -7,7 +7,17 @@ function loadPage(page) {
             }
             return response.text();
         })
-        .then(html => document.getElementById('content').innerHTML = html)
+        .then(html => {
+            // Create a temporary div to parse the HTML content
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = html;
+
+            // Extract the content from the temporary div
+            const content = tempDiv.querySelector('#content').innerHTML;
+
+            // Set the content to the actual content container
+            document.getElementById('content').innerHTML = content;
+        })
         .catch(error => console.error('Error loading page:', error));
 
     // Close the navbar menu on mobile after selecting a page
