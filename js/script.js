@@ -1,7 +1,12 @@
 function loadPage(page) {
     // Load content based on the selected page
-    fetch(`${page}.html`)
-        .then(response => response.text())
+    fetch(`./${page}.html`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
         .then(html => document.getElementById('content').innerHTML = html)
         .catch(error => console.error('Error loading page:', error));
 
