@@ -52,6 +52,21 @@ function loadPage(page) {
             header.style.marginTop = navbarHeight + 'px';
             content.style.marginTop = navbarHeight + 'px';
         });
+
+        // Get the navbar, header, and content elements
+        var navbar = document.querySelector('.navbar');
+        var header = document.querySelector('header');
+        var content = document.querySelector('.content');
+    
+        // If the navbar is expanded
+        if (navbar.classList.contains('show')) {
+            // Calculate the height of the navbar
+            var navbarHeight = navbar.getBoundingClientRect().height;
+    
+            // Set the top of the header and content
+            header.style.top = navbarHeight + 'px';
+            content.style.top = navbarHeight + 'px';
+        }    
 }
 
 // Load the default page on initial load

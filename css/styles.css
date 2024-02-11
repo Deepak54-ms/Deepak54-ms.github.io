@@ -31,4 +31,8 @@ header {
     margin-bottom: 20px; /* Add spacing between content and footer */
 }
 
+#navbar {
+    position: relative;
+}
+
 /* Add more styles as needed */
