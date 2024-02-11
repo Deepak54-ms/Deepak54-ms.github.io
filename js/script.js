@@ -42,6 +42,16 @@ function loadPage(page) {
     if (window.innerWidth < 768) {
         document.querySelector('.navbar-toggler').click();
     }
+
+        // When burger menu is clicked
+        burgerMenu.addEventListener('click', function() {
+            // Calculate the height of the expanded navbar
+            var navbarHeight = navbar.getBoundingClientRect().height;
+    
+            // Set the margin-top of the header and content
+            header.style.marginTop = navbarHeight + 'px';
+            content.style.marginTop = navbarHeight + 'px';
+        });
 }
 
 // Load the default page on initial load
