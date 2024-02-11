@@ -11,6 +11,16 @@ async function loadHtml(id, url) {
     }
 }
 
+// Function to handle navigation clicks and prevent default action
+async function handleNavigation(event, page) {
+    event.preventDefault();
+    try {
+        await loadPage(page);
+    } catch (error) {
+        console.error(`Error in navigation to page ${page}:`, error);
+    }
+}
+
 // Function to load a page (header, content, and footer)
 async function loadPage(page) {
     try {
