@@ -1,71 +1,45 @@
 // js/script.js
 
-function loadPage(page) {
-    // Load header
-    fetch('header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header').innerHTML = html;
-        })
-        .catch(error => console.error('Error loading header:', error));
+async function loadHtml(id, url) {
+    try {
+        const response = await fetch(url);
+        const html = await response.text();
+        document.getElementById(id).innerHTML = html;
+    } catch (error) {
+        console.error(`Error loading ${id}:`, error);
+    }
+}
 
-    // Load content
-    fetch(`./${page}.html`)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(html => {
-            // Create a temporary div to parse the HTML content
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = html;
-
-            // Extract the content from the temporary div
-            const content = tempDiv.querySelector('#content').innerHTML;
-
-            // Set the content to the actual content container
-            document.getElementById('content').innerHTML = content;
-        })
-        .catch(error => console.error('Error loading page:', error));
-
-    // Load footer
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('footer').innerHTML = html;
-        })
-        .catch(error => console.error('Error loading footer:', error));
+async function loadPage(page) {
+    // Load header, content, and footer
+    await loadHtml('header', 'header.html');
+    await loadHtml('content', `./${page}.html`);
+    await loadHtml('footer', 'footer.html');
 
     // Close the navbar menu on mobile after selecting a page
     if (window.innerWidth < 768) {
         document.querySelector('.navbar-toggler').click();
     }
 
-    // Get the navbar, header, and content elements
+    // Get the navbar and content elements
     var navbar = document.querySelector('.navbar');
-    var header = document.querySelector('header');
-    var content = document.querySelector('#content'); // Changed from '.content' to '#content'
+    var content = document.querySelector('#content');
 
-    // Get the burger menu button
-    var burgerMenu = document.querySelector('.navbar-toggler');
+    // Delay the calculation and application of the navbar height
+    setTimeout(function() {
+        // Calculate the height of the expanded navbar
+        var navbarHeight = navbar.getBoundingClientRect().height;
 
-    // When burger menu is clicked
-    burgerMenu.addEventListener('click', function() {
-        // Toggle the 'expanded' class on the navbar
-        navbar.classList.toggle('expanded');
-
-        // Delay the calculation and application of the navbar height
-        setTimeout(function() {
-            // Calculate the height of the expanded navbar
-            var navbarHeight = navbar.getBoundingClientRect().height;
-
-            // Set the padding-top of the content
-            content.style.paddingTop = navbarHeight + 'px'; // Changed from 'marginTop' to 'paddingTop'
-        }, 350); // Adjust this delay as needed
-    });
+        // Set the padding-top of the content
+        content.style.paddingTop = navbarHeight + 'px';
+    }, 350); // Adjust this delay as needed
 }
+
+// When burger menu is clicked
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    // Toggle the 'expanded' class on the navbar
+    document.querySelector('.navbar').classList.toggle('expanded');
+});
 
 // Load the default page on initial load
 document.addEventListener('DOMContentLoaded', function () {
