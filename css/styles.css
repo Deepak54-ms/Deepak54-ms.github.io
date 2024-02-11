@@ -10,9 +10,20 @@ body {
     }
 }
 
+/* Ensure that dynamically loaded content is responsive */
+#content {
+    margin-top: 20px; /* Add spacing between navbar and content */
+}
+
+/* Adjust spacing for header */
+header {
+    margin-bottom: 20px;
+}
+
 /* Adjust spacing for footer */
 #footer {
     margin-top: 20px;
+    margin-bottom: 20px; /* Add spacing between content and footer */
 }
 
-/* Ensure that dynamically
+/* Add more styles as needed */
