@@ -53,23 +53,16 @@ function loadPage(page) {
 
     // When burger menu is clicked
     burgerMenu.addEventListener('click', function() {
-        // Calculate the height of the expanded navbar
-        var navbarHeight = navbar.getBoundingClientRect().height;
+        // Delay the calculation and application of the navbar height
+        setTimeout(function() {
+            // Calculate the height of the expanded navbar
+            var navbarHeight = navbar.getBoundingClientRect().height;
 
-        // Set the margin-top of the header and content
-        header.style.marginTop = navbarHeight + 'px';
-        content.style.marginTop = navbarHeight + 'px';
+            // Set the margin-top of the header and content
+            header.style.marginTop = navbarHeight + 'px';
+            content.style.marginTop = navbarHeight + 'px';
+        }, 350); // Adjust this delay as needed
     });
-
-    // If the navbar is expanded
-    if (navbar.classList.contains('show')) {
-        // Calculate the height of the navbar
-        var navbarHeight = navbar.getBoundingClientRect().height;
-
-        // Set the top of the header and content
-        header.style.top = navbarHeight + 'px';
-        content.style.top = navbarHeight + 'px';
-    }    
 }
 
 // Load the default page on initial load
