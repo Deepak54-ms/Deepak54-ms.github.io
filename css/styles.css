@@ -32,7 +32,9 @@ header {
 }
 
 #navbar {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure navbar is above other elements */
 }
 
 /* Add more styles as needed */
