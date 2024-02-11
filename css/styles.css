@@ -4,7 +4,7 @@ body, html {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
 }
 
 @media (max-width: 768px) {
@@ -32,9 +32,14 @@ header {
 }
 
 #navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000; /* Ensure navbar is above other elements */
+    transition: all 0.3s ease;
+}
+
+.navbar.expanded {
+    height: 100%; /* Or any height you want when the navbar is expanded */
 }
 
 /* Add more styles as needed */

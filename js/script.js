@@ -63,6 +63,11 @@ function loadPage(page) {
             content.style.marginTop = navbarHeight + 'px';
         }, 350); // Adjust this delay as needed
     });
+
+    // Toggle the 'expanded' class on the navbar when burger menu is clicked
+    burgerMenu.addEventListener('click', function() {
+        document.querySelector('.navbar').classList.toggle('expanded');
+    });
 }
 
 // Load the default page on initial load
