@@ -10,9 +10,4 @@ body {
     }
 }
 
-/* Ensure that dynamically loaded content is responsive */
-#content {
-    margin-top: 20px; /* Add spacing between navbar and content */
-}
-
-/* Add more styles as needed */
+/* Ensure that dynamically
