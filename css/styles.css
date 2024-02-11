@@ -35,7 +35,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000; /* Ensure navbar is above other elements */
-    transition: all 0.3s ease;
+/*    transition: all 0.3s ease; */
 }
 
 .navbar.expanded {
