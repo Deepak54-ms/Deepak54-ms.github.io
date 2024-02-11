@@ -1,3 +1,5 @@
+// js/script.js
+
 function loadPage(page) {
     // Load header
     fetch('header.html')
