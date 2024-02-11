@@ -46,7 +46,7 @@ function loadPage(page) {
     // Get the navbar, header, and content elements
     var navbar = document.querySelector('.navbar');
     var header = document.querySelector('header');
-    var content = document.querySelector('.content');
+    var content = document.querySelector('#content'); // Changed from '.content' to '#content'
 
     // Get the burger menu button
     var burgerMenu = document.querySelector('.navbar-toggler');
@@ -61,9 +61,8 @@ function loadPage(page) {
             // Calculate the height of the expanded navbar
             var navbarHeight = navbar.getBoundingClientRect().height;
 
-            // Set the margin-top of the header and content
-            header.style.marginTop = navbarHeight + 'px';
-            content.style.marginTop = navbarHeight + 'px';
+            // Set the padding-top of the content
+            content.style.paddingTop = navbarHeight + 'px'; // Changed from 'marginTop' to 'paddingTop'
         }, 350); // Adjust this delay as needed
     });
 }

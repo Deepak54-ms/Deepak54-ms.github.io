@@ -15,7 +15,7 @@ body, html {
 
 /* Ensure that dynamically loaded content is responsive */
 #content {
-    margin-top: 20px; /* Add spacing between navbar and content */
+    padding-top: 20px; /* Add spacing between navbar and content */
     position: relative;
 }
 
