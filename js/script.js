@@ -20,6 +20,14 @@ function loadPage(page) {
         })
         .catch(error => console.error('Error loading page:', error));
 
+    // Load the footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('footer').innerHTML = html;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+
     // Close the navbar menu on mobile after selecting a page
     if (window.innerWidth < 768) {
         document.querySelector('.navbar-toggler').click();

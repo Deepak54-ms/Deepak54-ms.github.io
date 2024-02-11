@@ -10,4 +10,9 @@ body {
     }
 }
 
+/* Adjust spacing for footer */
+#footer {
+    margin-top: 20px;
+}
+
 /* Ensure that dynamically
