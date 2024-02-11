@@ -5,16 +5,6 @@ body, html {
     padding: 0;
 }
 
-body {
-    padding-top: 60px; /* Adjust this value based on the height of your navbar */
-}
-
-@media (max-width: 768px) {
-    body {
-        padding-top: 56px; /* Adjust for a different height on smaller screens */
-    }
-}
-
 /* Ensure that dynamically loaded content is responsive */
 #content {
     position: relative;
@@ -32,12 +22,8 @@ footer {
     margin-bottom: 20px; /* Add spacing between content and footer */
 }
 
-#navbar {
+.navbar {
     position: fixed;
     top: 0;
     z-index: 1000; /* Ensure navbar is above other elements */
-}
-
-.navbar.expanded {
-    height: 100%; /* Or any height you want when the navbar is expanded */
 }

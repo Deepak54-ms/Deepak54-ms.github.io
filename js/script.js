@@ -1,5 +1,6 @@
 // js/script.js
 
+// Function to load HTML from a given URL into a specified element
 async function loadHtml(id, url) {
     try {
         const response = await fetch(url);
@@ -10,34 +11,38 @@ async function loadHtml(id, url) {
     }
 }
 
+// Function to load a page (header, content, and footer)
 async function loadPage(page) {
-    // Load header, content, and footer
-    await loadHtml('header', 'header.html');
-    await loadHtml('content', `./${page}.html`);
-    await loadHtml('footer', 'footer.html');
+    try {
+        // Load header, content, and footer
+        await loadHtml('header', 'header.html');
+        await loadHtml('content', `./${page}.html`);
+        await loadHtml('footer', 'footer.html');
+    } catch (error) {
+        console.error(`Error loading page ${page}:`, error);
+    }
 
     // Close the navbar menu on mobile after selecting a page
     if (window.innerWidth < 768) {
         document.querySelector('.navbar-toggler').click();
     }
 
-    // Get the navbar and content elements
-    var navbar = document.querySelector('.navbar');
-    var content = document.querySelector('#content');
+    // Get the navbar and body elements
+    let navbar = document.querySelector('.navbar');
+    let body = document.querySelector('body');
 
     // Delay the calculation and application of the navbar height
     setTimeout(function() {
         // Calculate the height of the expanded navbar
-        var navbarHeight = navbar.getBoundingClientRect().height;
+        let navbarHeight = navbar.getBoundingClientRect().height;
 
-        // Set the padding-top of the content
-        content.style.paddingTop = navbarHeight + 'px';
-    }, 350); // Adjust this delay as needed
+        // Set the padding-top of the body
+        body.style.paddingTop = navbarHeight + 'px';
+    }, 60); // Adjust this delay as needed
 }
 
-// When burger menu is clicked
+// When burger menu is clicked, toggle the 'expanded' class on the navbar
 document.querySelector('.navbar-toggler').addEventListener('click', function() {
-    // Toggle the 'expanded' class on the navbar
     document.querySelector('.navbar').classList.toggle('expanded');
 });
 
