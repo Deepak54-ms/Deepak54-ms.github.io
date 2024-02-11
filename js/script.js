@@ -53,6 +53,9 @@ function loadPage(page) {
 
     // When burger menu is clicked
     burgerMenu.addEventListener('click', function() {
+        // Toggle the 'expanded' class on the navbar
+        navbar.classList.toggle('expanded');
+
         // Delay the calculation and application of the navbar height
         setTimeout(function() {
             // Calculate the height of the expanded navbar
@@ -62,11 +65,6 @@ function loadPage(page) {
             header.style.marginTop = navbarHeight + 'px';
             content.style.marginTop = navbarHeight + 'px';
         }, 350); // Adjust this delay as needed
-    });
-
-    // Toggle the 'expanded' class on the navbar when burger menu is clicked
-    burgerMenu.addEventListener('click', function() {
-        document.querySelector('.navbar').classList.toggle('expanded');
     });
 }
 
