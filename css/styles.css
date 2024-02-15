@@ -44,15 +44,16 @@ body, html {
     flex-direction: row; /* Image and text side by side in desktop view */
 }
 
-.author-image {
+body .author-image {
     flex: 0 0 30%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 30% */
+    max-width: 300px; /* Adjust as needed */
     height: 300px; /* Adjust as needed */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
     overflow: hidden; /* Ensure the image doesn't overflow the div */
 }
 
-.author-image img {
+body .author-image img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
