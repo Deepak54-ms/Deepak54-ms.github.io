@@ -39,23 +39,24 @@ body, html {
 .author-section {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-direction: row; /* Image and text side by side in desktop view */
 }
 
 .author-image {
-    max-width: 30%; /* Adjust the percentage as needed */
+    flex: 0 0 30%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 30% */
     height: auto; /* Adjust height automatically to maintain aspect ratio */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
 }
 
 .author-info {
-    flex-grow: 1; /* Allows the text to take up the remaining space */
+    flex: 1; /* Allows the text to take up the remaining space */
     text-align: justify;
     line-height: 1.6;
     font-size: 18px; /* Adjust as needed */
+    padding-left: 20px; /* Add some space between the image and the text */
 }
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
@@ -64,6 +65,10 @@ body, html {
     }
 
     .author-image {
-        max-width: 100%;
+        flex: 0 0 100%; /* Image takes up the full width on mobile view */
+    }
+
+    .author-info {
+        padding-left: 0; /* Remove the space between the image and the text on mobile view */
     }
 }
