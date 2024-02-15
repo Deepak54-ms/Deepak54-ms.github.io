@@ -42,6 +42,7 @@ footer {
 
 .author-image {
     max-width: 100%;
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
 }
