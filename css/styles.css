@@ -11,13 +11,13 @@ body, html {
 }
 
 /* Adjust spacing for header */
-header {
+#header {
     margin-bottom: 20px;
     position: relative;
 }
 
 /* Adjust spacing for footer */
-footer {
+#footer {
     margin-top: 20px;
     margin-bottom: 20px; /* Add spacing between content and footer */
 }
@@ -26,11 +26,14 @@ footer {
     position: fixed;
     top: 0;
     z-index: 1000; /* Ensure navbar is above other elements */
+    background-color: #f8f9fa; /* Add a background color */
+    padding: 10px 0; /* Add some vertical padding */
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px; /* Add some padding */
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -64,6 +67,6 @@ footer {
     }
 
     .author-image {
-        max-width: 50%;
+        max-width: 100%;
     }
 }
