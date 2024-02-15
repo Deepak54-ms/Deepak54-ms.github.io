@@ -1,3 +1,5 @@
+/* // FILEPATH: /c:/Personal/workspace_personal/Deepak54-ms.github.io/css/styles.css
+
 body, html {
     width: 100%;
     height: 100%;
@@ -6,79 +8,79 @@ body, html {
 }
 
 /* Ensure that dynamically loaded content is responsive */
-#content {
+/* #content {
     position: relative;
-}
+} */
 
 /* Adjust spacing for header */
-#header {
+/* #header {
     margin-bottom: 20px;
     position: relative;
-}
+} */
 
 /* Adjust spacing for footer */
-#footer {
+/* #footer {
     margin-top: 20px;
     margin-bottom: 20px; /* Add spacing between content and footer */
-}
+} */
 
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     z-index: 1000; /* Ensure navbar is above other elements */
     background-color: #f8f9fa; /* Add a background color */
     padding: 10px 0; /* Add some vertical padding */
-}
+} */
 
 
-.container {
+/* .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px; /* Add some padding */
-}
+} */
 
-.author-section {
+/* .author-section {
     display: flex;
     flex-wrap: nowrap; /* Prevents the flex items from wrapping */
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row; /* Image and text side by side in desktop view */
-}
+} */
 
-body .author-image {
+/* body .author-image {
     flex: 0 0 30%;
     max-width: 300px;
     max-height: 300px; /* Set a max height to control the image size */
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
-}
+} */
 
-body .author-image img {
+/* body .author-image img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and cover the container */
-}
+} */
 
-.author-info {
+/* .author-info {
     flex: 1; /* Allows the text to take up the remaining space */
     text-align: justify;
     line-height: 1.6;
     font-size: 18px; /* Adjust as needed */
     padding-left: 20px; /* Add some space between the image and the text */
-}
+} */
 
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
-    .author-section {
+/* @media (max-width: 768px) { /* Adjust breakpoint as needed */
+    /* .author-section {
         flex-wrap: wrap; /* Allow the flex items to wrap on small screens */
-    }
+    } */
 
-    .author-image {
+    /* .author-image {
         flex: 0 0 100%; /* Image takes up the full width on mobile view */
-    }
+    } */
 
-    .author-info {
+    /* .author-info {
         flex: 1 0 100%; /* Text takes up the full width on mobile view */
         padding-left: 0; /* Remove the space between the image and the text on mobile view */
-    }
-}
+    } */
+/* } */
