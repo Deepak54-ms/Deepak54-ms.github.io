@@ -47,9 +47,15 @@ body, html {
 .author-image {
     flex: 0 0 30%; /* flex-grow: 0, flex-shrink: 0, flex-basis: 30% */
     height: 300px; /* Adjust as needed */
-    object-fit: cover; /* Ensure the image covers the entire content box */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
+    overflow: hidden; /* Ensure the image doesn't overflow the div */
+}
+
+.author-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire content box */
 }
 
 .author-info {
