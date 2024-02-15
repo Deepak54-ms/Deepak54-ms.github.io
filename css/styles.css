@@ -45,7 +45,7 @@ body, html {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row; /* Image and text side by side in desktop view */
 }
 
 .author-image {
@@ -59,6 +59,7 @@ body, html {
     flex-grow: 1; /* Allows the text to take up the remaining space */
     text-align: justify;
     line-height: 1.6;
+    font-size: 18px; /* Adjust as needed */
 }
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
@@ -67,6 +68,6 @@ body, html {
     }
 
     .author-image {
-        max-width: 30%;
+        max-width: 100%;
     }
 }
