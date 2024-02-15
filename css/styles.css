@@ -34,10 +34,6 @@ body, html {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px; /* Add some padding */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .author-section {
@@ -49,7 +45,7 @@ body, html {
 }
 
 .author-image {
-    max-width: 30%; /* Adjust the percentage as needed */
+    width: 30%; /* Adjust the percentage as needed */
     height: auto; /* Adjust height automatically to maintain aspect ratio */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
