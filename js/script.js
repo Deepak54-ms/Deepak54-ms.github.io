@@ -48,6 +48,11 @@ async function loadPage(page) {
 
         // Set the padding-top of the body
         body.style.paddingTop = navbarHeight + 'px';
+
+        // Trigger a reflow of the CSS
+        body.classList.add('reflow');
+        void body.offsetWidth; // Reading offsetWidth forces a reflow
+        body.classList.remove('reflow');
     }, 60); // Adjust this delay as needed
 }
 
