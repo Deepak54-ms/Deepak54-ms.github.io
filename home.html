@@ -1,4 +1,19 @@
 <!-- Home Page Content -->
+
+<style>
+    @media (max-width: 768px) {
+        .author-section {
+            flex-direction: column;
+        }
+        .author-image {
+            order: 2;
+        }
+        .author-info {
+            order: 1;
+        }
+    }
+</style>
+
 <div style="display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; padding: 20px;">
     <div style="flex: 0 0 48%; max-width: 48%; height: auto; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
         <img src="images/marie_france_image.jpg" alt="Marie France Martin" style="width: 100%; height: 100%; object-fit: cover;">
@@ -18,16 +33,4 @@
     </div>
 </div>
 
-<style>
-    @media (max-width: 768px) {
-        .author-section {
-            flex-direction: column;
-        }
-        .author-image {
-            order: 2;
-        }
-        .author-info {
-            order: 1;
-        }
-    }
-</style>
+
