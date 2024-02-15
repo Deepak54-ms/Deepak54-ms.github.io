@@ -53,16 +53,17 @@ footer {
 }
 
 .author-info {
+    flex-grow: 1; /* Allows the text to take up the remaining space */
     text-align: justify;
     line-height: 1.6;
 }
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
-    .home-content {
+    .author-section {
         flex-direction: column;
     }
 
-    .home-image {
-        max-width: 100%;
+    .author-image {
+        max-width: 50%;
     }
 }
