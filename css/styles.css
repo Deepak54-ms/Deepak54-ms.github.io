@@ -39,7 +39,7 @@ body, html {
 
 .author-section {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevents the flex items from wrapping */
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row; /* Image and text side by side in desktop view */
@@ -70,7 +70,7 @@ body .author-image img {
 
 @media (max-width: 768px) { /* Adjust breakpoint as needed */
     .author-section {
-        flex-direction: column;
+        flex-wrap: wrap; /* Allow the flex items to wrap on small screens */
     }
 
     .author-image {
@@ -78,6 +78,7 @@ body .author-image img {
     }
 
     .author-info {
+        flex: 1 0 100%; /* Text takes up the full width on mobile view */
         padding-left: 0; /* Remove the space between the image and the text on mobile view */
     }
 }
