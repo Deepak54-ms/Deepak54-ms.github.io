@@ -49,7 +49,7 @@ body, html {
 }
 
 .author-image {
-    max-width: 50%;
+    max-width: 30%; /* Adjust the percentage as needed */
     height: auto; /* Adjust height automatically to maintain aspect ratio */
     border-radius: 8px; /* Optional: Add a border-radius for a rounded image */
     margin-bottom: 20px;
@@ -67,6 +67,6 @@ body, html {
     }
 
     .author-image {
-        max-width: 100%;
+        max-width: 30%;
     }
 }
