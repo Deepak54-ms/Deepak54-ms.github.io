@@ -53,9 +53,9 @@ body, html {
 }
 
 .author-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire content box */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
 }
 
 .author-info {
