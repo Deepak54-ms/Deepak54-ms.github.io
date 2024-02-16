@@ -42,7 +42,7 @@ async function loadPage(page) {
     let body = document.querySelector('body');
 
     // Delay the calculation and application of the navbar height
-    setTimeout(function() {
+    setTimeout(function () {
         // Calculate the height of the expanded navbar
         let navbarHeight = navbar.getBoundingClientRect().height;
 
@@ -57,7 +57,7 @@ async function loadPage(page) {
 }
 
 // When burger menu is clicked, toggle the 'expanded' class on the navbar
-document.querySelector('.navbar-toggler').addEventListener('click', function() {
+document.querySelector('.navbar-toggler').addEventListener('click', function () {
     document.querySelector('.navbar').classList.toggle('expanded');
 });
 
@@ -66,19 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
     loadPage('home');
 });
 
-    // Function to load text content based on the selected text
-    async function loadText(textName) {
-        try {
-            // Add a loading spinner or placeholder if needed
-            document.getElementById('textContent').innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
+// Function to load text content based on the selected text
+async function loadText(textName) {
+    try {
+        // Add a loading spinner or placeholder if needed
+        document.getElementById('textContent').innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
 
-            // Load the text content based on the selected text name
-            const response = await fetch(`./texts/${textName}.html`);
-            const textHtml = await response.text();
-            
-            // Display the loaded text content
-            document.getElementById('textContent').innerHTML = textHtml;
-        } catch (error) {
-            console.error(`Error loading text content for ${textName}:`, error);
-        }
+        // Load the text content dynamically
+        await loadHtml('textContent', `./textes/${textName}.html`);
+    } catch (error) {
+        console.error(`Error loading text content for ${textName}:`, error);
     }
+}
