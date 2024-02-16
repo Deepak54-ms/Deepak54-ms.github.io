@@ -1,6 +1,24 @@
-<!-- textes Page Content -->
-<div class="container">
-    <h2>Our textes</h2>
-    <p>This is the textes page content.</p>
-    <p>Check out our collection of textes!</p>
+<!-- Textes Page Content -->
+<div class="container mt-3">
+    <!-- Section to Select Text -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <h2 class="text-center">Select Text</h2>
+            <div class="list-group">
+                <!-- Add onclick events to load specific text content -->
+                <a href="sadvani.html" class="list-group-item list-group-item-action" onclick="loadText('sadvani')">Sadvani</a>
+                <a href="#" class="list-group-item list-group-item-action" onclick="loadText('naamJapa')">Naam Japa</a>
+                <a href="#" class="list-group-item list-group-item-action" onclick="loadText('amritvani')">Amritvani</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section to Display Text Content -->
+    <div class="row">
+        <div class="col-12">
+            <div id="textContent">
+                <!-- Content will be loaded here dynamically -->
+            </div>
+        </div>
+    </div>
 </div>

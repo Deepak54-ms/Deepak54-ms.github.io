@@ -65,3 +65,20 @@ document.querySelector('.navbar-toggler').addEventListener('click', function() {
 document.addEventListener('DOMContentLoaded', function () {
     loadPage('home');
 });
+
+    // Function to load text content based on the selected text
+    async function loadText(textName) {
+        try {
+            // Add a loading spinner or placeholder if needed
+            document.getElementById('textContent').innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
+
+            // Load the text content based on the selected text name
+            const response = await fetch(`./texts/${textName}.html`);
+            const textHtml = await response.text();
+            
+            // Display the loaded text content
+            document.getElementById('textContent').innerHTML = textHtml;
+        } catch (error) {
+            console.error(`Error loading text content for ${textName}:`, error);
+        }
+    }
