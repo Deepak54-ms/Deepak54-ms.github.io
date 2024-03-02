@@ -73,7 +73,7 @@ async function loadText(textName) {
         document.getElementById('textContent').innerHTML = '<div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>';
 
         // Load the text content dynamically
-        await loadHtml('textContent', `./textes/${textName}.html`);
+        await loadHtml('textContent', `../textes/${textName}.html`);
     } catch (error) {
         console.error(`Error loading text content for ${textName}:`, error);
     }
