@@ -77,5 +77,9 @@ async function loadText(textName) {
         await loadHtml('textContent', `../textes/${textName}.html`);
     } catch (error) {
         console.error(`Error loading text content for ${textName}:`, error);
+    } finally {
+        // Hide the loading message
+        document.getElementById('loading').style.display = 'none';
     }
+
 }
